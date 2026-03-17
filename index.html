@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matcha Großhandel Germany | B2B Matcha Supplier Germany</title>
+    <meta name="description" content="Ihr lokaler B2B Matcha-Distributor im Raum Deutschland. Monatliche Lieferungen aus Japan & China, maßgeschneiderte Preise, ab 1kg/Monat. Local wholesale matcha supplier in Germany.">
+    <meta name="keywords" content="Matcha Großhandel, B2B Matcha Deutschland, Matcha Lieferant Deutschland, Japan Matcha wholesale, Matcha B2B China, Gastronomie Matcha">
+    
+    <style>
+
+        :root {
+            --primary-color: #2b5329; 
+            --secondary-color: #4caf50;
+            --bg-color: #f9fbf9;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            background-color: white;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .lang-switch button {
+            background: none;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            margin-left: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        .lang-switch button.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(43, 83, 41, 0.05), rgba(43, 83, 41, 0.1));
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            flex: 1 1 300px;
+            text-align: center;
+        }
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #a8d5a2;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
+
+        .product-gallery {
+            padding: 60px 5%;
+            background-color: white;
+            text-align: center;
+        }
+        .product-gallery h2 {
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain; 
+            padding: 15px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .product-info {
+            padding: 15px;
+            text-align: left;
+        }
+        .product-info h4 {
+            margin: 0 0 5px 0;
+            color: var(--primary-color);
+        }
+        .product-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .spec-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 10px 0 15px 0;
+        }
+        .tag {
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .tag-grade { background-color: #888; color: white; border-radius: 20px; }
+        .tag-harvest { background-color: #f2c94c; color: #333; border-radius: 4px; }
+        .tag-origin { border: 1px solid #333; color: #333; border-radius: 20px; background-color: transparent; }
+
+        .flavor-box {
+            border: 2px solid #7cb342;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 15px;
+            background-color: #fff;
+        }
+        .flavor-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .flavor-row:last-child { margin-bottom: 0; }
+        
+
+        .leaf-rating {
+            display: flex;
+            gap: 2px;
+        }
+        .leaf {
+            width: 18px;
+            height: 18px;
+            fill: #e0e0e0; 
+        }
+        .leaf.lvl-1 { fill: #c5e1a5; } 
+        .leaf.lvl-2 { fill: #aed581; }
+        .leaf.lvl-3 { fill: #8bc34a; }
+        .leaf.lvl-4 { fill: #558b2f; }
+        .leaf.lvl-5 { fill: #33691e; }
+
+        .hero-email {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #666;
+        }
+        .hero-email a {
+            color: var(--primary-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .hero-email a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Matcha Werk</div>
+        <div class="lang-switch">
+            <button onclick="switchLang('de')" id="btn-de" class="active">DE</button>
+            <button onclick="switchLang('en')" id="btn-en">EN</button>
+        </div>
+    </header>
+
+    <div id="content-de" class="lang-content active">
+        <section class="hero">
+            <h1>Ihr lokaler B2B Matcha-Distributor in Deutschland</h1>
+            <p>Wir bringen Premium-Matcha aus Japan und China direkt zu Ihnen. Ohne Zollstress, ohne lange Wartezeiten. Maßgeschneiderte Lösungen für Gastronomie und Handel in Hessen und ganz Europa.</p>
+            <a href="mailto:werkmatcha@duck.com?subject=B2B Matcha Anfrage" class="cta-button">Jetzt B2B-Preise anfragen</a>
+            <p class="hero-email">✉️ Oder direkt per E-Mail an: <a href="mailto:werkmatcha@duck.com">werkmatcha@duck.com</a></p>
+        </section>
+
+<section class="product-gallery">
+            <h2>Unsere Matcha-Auswahl (B2B)</h2>
+            
+            <div class="product-grid">
+                
+                <div class="product-item">
+                    <img src="webp/Jap-02.webp" alt="Premium Japan Matcha">
+                    <div class="product-info">
+                        <div class="spec-tags">
+                            <span class="tag tag-grade">🍵 Ceremonial grade</span>
+                            <span class="tag tag-harvest">1st Harvest</span>
+                            <span class="tag tag-origin">📍 Uji, Kyoto</span>
+                        </div>
+                        <h4>Japan Ceremonial (Grad A)</h4>
+                        <p>Leuchtend grün, für puren Genuss und höchste Ansprüche.</p>
+                        
+                        <div class="flavor-box">
+                            <div class="flavor-row">
+                                <span>Aroma :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-3" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-4" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-5" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Umami :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-3" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-4" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Bitterness :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="webp/Jap-01.webp" alt="Premium Japan Matcha">
+                    <div class="product-info">
+                        <div class="spec-tags">
+                            <span class="tag tag-grade">🥤 Latte grade</span>
+                            <span class="tag tag-harvest">2nd Harvest</span>
+                            <span class="tag tag-origin">📍 Shizuoka</span>
+                        </div>
+                        <h4>Japan Ceremonial (Grad B)</h4>
+                        <p>Kräftiges Aroma, perfekt für hochwertige Matcha Lattes.</p>
+                        
+                        <div class="flavor-box">
+                            <div class="flavor-row">
+                                <span>Aroma :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-3" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Umami :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-3" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Bitterness :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="webp/chi-02.webp" alt="China Baking Grade">
+                    <div class="product-info">
+                        <div class="spec-tags">
+                            <span class="tag tag-grade">🥐 Baking grade</span>
+                            <span class="tag tag-harvest">Autumn</span>
+                            <span class="tag tag-origin">📍 Zhejiang, China</span>
+                        </div>
+                        <h4>China Baking Grade</h4>
+                        <p>Hitzestabil, perfekt für Bäckereien und industrielle Verarbeitung.</p>
+                        
+                        <div class="flavor-box">
+                            <div class="flavor-row">
+                                <span>Aroma :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Umami :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Bitterness :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-3" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-4" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-5" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div> 
+        </section>
+
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>🌍 Monatliche Lieferungen & Vielfalt</h3>
+                <p>Wir erhalten monatlich frische Lieferungen direkt in unser Lager in der Nähe von Frankfurt. Wir bieten verschiedene Qualitätsstufen und Preisklassen – sowohl aus traditionellen japanischen Teegärten als auch von Premium-Produzenten aus China.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🤝 Maßgeschneiderte Preise & Low MOQ</h3>
+                <p>Wir passen uns Ihrem Markt an! Basierend auf Ihrem Kundenfeedback können wir Produkte und Preise speziell für Sie anpassen. Sehr wettbewerbsfähige Konditionen – und das bereits ab einer extrem niedrigen Mindestbestellmenge (MOQ) von nur <strong>1 kg / Monat</strong>.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📦 Smarte Logistik & Co-Loading</h3>
+                <p>Transparente Frachtkosten: Regulär liegen diese bei 25€ bis 50€/kg. <strong>Unser Vorteil:</strong> Durch unsere monatlichen Sammelbestellungen nach Frankfurt (Co-Loading mit anderen Kunden) können wir Ihre Versandkosten drastisch senken!</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="content-en" class="lang-content">
+        <section class="hero">
+            <h1>Your Local B2B Matcha Distributor in Germany</h1>
+            <p>We bring premium Matcha from Japan and China directly to your business. No customs hassle, no long waits. Tailored solutions for cafés, bakeries, and retailers in Hessen and across Europe.</p>
+            <a href="mailto:werkmatcha@duck.com?subject=B2B Matcha Inquiry" class="cta-button">Request B2B Pricing Now</a>
+            <p class="hero-email">✉️ Or email us directly at: <a href="mailto:werkmatcha@duck.com">werkmatcha@duck.com</a></p>
+        </section>
+
+        <section class="product-gallery">
+            <h2>Unsere Matcha-Auswahl (B2B)</h2>
+            
+            <div class="product-grid">
+                
+                <div class="product-item">
+                    <img src="webp/Jap-02.webp" alt="Premium Japan Matcha">
+                    <div class="product-info">
+                        <div class="spec-tags">
+                            <span class="tag tag-grade">🍵 Ceremonial grade</span>
+                            <span class="tag tag-harvest">1st Harvest</span>
+                            <span class="tag tag-origin">📍 Uji, Kyoto</span>
+                        </div>
+                        <h4>Japan Ceremonial (Grad A)</h4>
+                        <p>Leuchtend grün, für puren Genuss und höchste Ansprüche.</p>
+                        
+                        <div class="flavor-box">
+                            <div class="flavor-row">
+                                <span>Aroma :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-3" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-4" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-5" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Umami :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-3" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-4" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Bitterness :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="webp/Jap-01.webp" alt="Premium Japan Matcha">
+                    <div class="product-info">
+                        <div class="spec-tags">
+                            <span class="tag tag-grade">🥤 Latte grade</span>
+                            <span class="tag tag-harvest">2nd Harvest</span>
+                            <span class="tag tag-origin">📍 Shizuoka</span>
+                        </div>
+                        <h4>Japan Ceremonial (Grad B)</h4>
+                        <p>Kräftiges Aroma, perfekt für hochwertige Matcha Lattes.</p>
+                        
+                        <div class="flavor-box">
+                            <div class="flavor-row">
+                                <span>Aroma :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-3" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Umami :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-3" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Bitterness :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="webp/chi-02.webp" alt="China Baking Grade">
+                    <div class="product-info">
+                        <div class="spec-tags">
+                            <span class="tag tag-grade">🥐 Baking grade</span>
+                            <span class="tag tag-harvest">Autumn</span>
+                            <span class="tag tag-origin">📍 Zhejiang, China</span>
+                        </div>
+                        <h4>China Baking Grade</h4>
+                        <p>Hitzestabil, perfekt für Bäckereien und industrielle Verarbeitung.</p>
+                        
+                        <div class="flavor-box">
+                            <div class="flavor-row">
+                                <span>Aroma :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Umami :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf empty" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                            <div class="flavor-row">
+                                <span>Bitterness :</span>
+                                <div class="leaf-rating">
+                                    <svg class="leaf lvl-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-3" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-4" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                    <svg class="leaf lvl-5" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.03,13.88 8,15.68C11.5,13.79 17,11 17,8Z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div> 
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>🌍 Monthly Shipments & Global Origins</h3>
+                <p>We receive fresh shipments every month directly to our hub near Frankfurt. We offer a wide range of qualities and price points, sourcing from both traditional Japanese tea farms and high-value Chinese producers.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🤝 Custom Pricing & Low MOQ</h3>
+                <p>We adapt to your business! Based on your feedback, we can customize products and tailor our pricing specifically for you. Highly competitive rates starting at an extremely low Minimum Order Quantity (MOQ) of just <strong>1 kg / month</strong>.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📦 Smart Shipping & Co-Loading</h3>
+                <p>Transparent logistics: Standard airfreight ranges from 25€ to 50€/kg. <strong>Our Advantage:</strong> By pooling your order with our monthly consolidated shipments to Frankfurt (co-loading), we can drastically reduce your shipping costs!</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Matcha Werk. All rights reserved.</p>
+        <!-- <p>
+            <a href="impressum.html">Impressum</a> | 
+            <a href="datenschutz.html">Datenschutzerklärung</a>
+        </p> -->
+    </footer>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-switch button').forEach(el => el.classList.remove('active'));
+            document.getElementById('content-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+</html>
